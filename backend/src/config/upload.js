@@ -2,10 +2,9 @@ const multer = require('multer');
 const path = require('path');
 
 module.exports = {
-    storage: multer.diskStorage({
+    storage: multer.diskStorage({//método para armazenar o arquivo no disco
         destination: path.resolve(__dirname,'..','..','uploads'), //usa o path para apontar o caminho que será salva a imagem
         filename: (req, file, callback) => {
-
             const ext = path.extname(file.originalname);//pega a extensão original do arquivo
             const name = path.basename(file.originalname, ext); //pega o nome original do arquivo
 

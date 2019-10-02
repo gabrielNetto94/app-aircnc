@@ -18,7 +18,7 @@ module.exports = {
         const { user_id } = req.headers; //pega do header da requisição
 
         const user = await User.findById(user_id);
-
+        
         if(!user){
             return res.status(404).json({error: 'User does not exists' });
         }
@@ -31,6 +31,7 @@ module.exports = {
             price: price
         })
         
+        console.log("Spot registred! ",company)
         return res.json(spot);
     }
 };
