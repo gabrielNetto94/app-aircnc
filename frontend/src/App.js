@@ -1,21 +1,18 @@
-import React from 'react';
-import './App.css';
+import React from 'react'; //useState para pegar informações da DOM, ao inves o
+import Routes from './routes';
+
 import logo from './assets/logo.svg';
+import './App.css';
 
 function App() {
   return (
+    
     <div className="container">
+      
       <img src={ logo } alt="log airCnc"/>
       
       <div className="content">
-        <p>
-          Ofereça <strong>spots</strong> para programadores e encontre <strong>talentos</strong> para sua empresa.
-        </p>
-        <form>
-          <label htmlFor="email">E-MAIL </label>
-          <input type="email"id="emai" placeholder="Digite seu email"/>
-          <button type="submit" className="btn">Entrar</button>
-        </form>
+        <Routes />   
 
       </div>
     </div>

@@ -7,8 +7,6 @@ module.exports = {
         let user = await User.findOne({email});
             if(!user){
                  user = await User.create({ email });
-            }else{
-                return res.json({message:'User already exists',user})
             }
         return res.json(user);
     }

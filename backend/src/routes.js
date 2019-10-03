@@ -11,7 +11,7 @@ const BookingController = require('./controllers/BookingController');
 const routes = express.Router();
 const upload = multer(uploadConfig);
 
-routes.post('/sessions/:id', SessionControler.store); //cria usuário
+routes.post('/sessions', SessionControler.store); //cria usuário
 routes.post('/spots', upload.single('thumbnail'), SpotController.store); //cria spot
 routes.get('/spots', SpotController.index); //retorna todos os spots
 routes.get('/dashboard', DashboardController.show);//retorna spots de um usuári específico
