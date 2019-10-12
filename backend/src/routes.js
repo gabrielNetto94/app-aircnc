@@ -16,4 +16,7 @@ routes.post('/spots', upload.single('thumbnail'), SpotController.store); //cria 
 routes.get('/spots', SpotController.index); //retorna todos os spots
 routes.get('/dashboard', DashboardController.show);//retorna spots de um usuári específico
 routes.post('/spots/:spot_id/bookings',BookingController.store); // armazena a solicitação de usuário para spot
+routes.get('/',(req,res) =>{
+    return res.send(("asda"));
+}); //retorna todos os spots
 module.exports = routes;  
